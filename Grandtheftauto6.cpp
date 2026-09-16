@@ -1,1 +1,1 @@
-return null;
+/*Somebody removed all our code -Rockstar Games*/
