@@ -1,0 +1,164 @@
+:root {
+    body.dark-mode {
+        --background-color: #121212;
+        --surface-color: #1e1e1e;
+        --text-color: #ffffff;
+        --text-muted-color: #aaaaaa;
+        --border-color: var(--surface-color);
+    }
+    --background-color: #ffffff;
+    --surface-color: #f0f0f0;
+    --text-color: #000000;
+    --text-muted-color: #666666;
+    border: var(--surface-color);
+    --primary-color: #007bff;
+    --primary-color-hover: #0056b3;
+
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: var(--surface-color);
+    --font-family: 'Arial', sans-serif;
+    --heading-font-family: 'Helvetica', sans-serif;
+    --base-font-size: 16px;
+    --heading-font-size: 24px;
+    --line-height: 1.5;
+    --heading-line-height: 1.2;
+    --spacing-unit: 8px;
+    --border-radius: 4px;
+    --transition-duration: 0.3s;
+    --z-index-modal: 1000;
+    --z-index-tooltip: 1100;
+    --z-index-dropdown: 1200;
+    --z-index-header: 1300;
+    --z-index-footer: 1400;
+
+    body {
+        font-family: var(--font-family);
+        font-size: var(--base-font-size);
+        line-height: var(--line-height);
+        color: var(--text-color);
+        background-color: var(--background-color);
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .theme-button {
+        font-family: var(--font-family);
+        font-size: var(--base-font-size);
+        line-height: var(--line-height);
+        color: var(--text-color);
+        background-color: var(--surface-color);
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+        cursor: pointer;
+        transition: background-color var(--transition-duration), color var(--transition-duration);
+    }
+
+    height: 1px;
+    background-color: var(--border-color);
+    border: none;
+    margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+.add-task {
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+    cursor: pointer;
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+#taskInput {
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+.add-button {
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+    cursor: pointer;
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+.add-button:hover {
+    background-color: var(--border-color);
+    color: var(--background-color);
+}
+
+.add-button:active {
+    background-color: var(--text-color);
+    color: var(--surface-color);
+}
+
+#taskList {
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#taskList li {
+    padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+    border-bottom: 1px solid var(--border-color);
+}
+
+#taskList li:last-child {
+    border-bottom: none;
+}   
+
+#taskList li span {
+    display: inline-block;
+    width: 100%;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: var(--border-color);
+}
+
+.completed-button {
+    text-decoration: line-through;
+    color: var(--border-color);
+}
+
+.delete-button {
+    text-decoration: none;
+    color: var(--text-color);
+}   
+
+.delete-button::after {
+    content: " ×";
+    color: var(--text-color);
+}   
